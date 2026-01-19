@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>barberia</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
+  
+  <!-- Bootstrap 5 CDN: proporciona componentes y utilidades responsive (grid, botones, formularios, etc.) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados (sobreescribe Bootstrap si es necesario) -->
+  <link rel="stylesheet" href="../css-hojas-de-estilo/estilos-compiled.css">
+  
+  <!-- Font Awesome: iconos (usado en WhatsApp e Instagram) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <!--
+    ====================================================================
+    CAMBIOS IMPLEMENTADOS: Bootstrap + Pseudoclases CSS
+    ====================================================================
+    
+    1. BOOTSTRAP 5 CDN (en <head>):
+       - CSS Framework responsivo para diseño grid, componentes y utilidades
+       - Clases disponibles: .container, .row, .col-*, .btn, .form-*, etc.
+       - JS Bundle incluye: modales, dropdowns, tooltips, carruseles
+    
+    2. PSEUDOCLASES AGREGADAS (en estilos.css):
+       - :hover    → Enlaces con color rosado y escala; tarjetas con sombra
+       - :focus    → Mejora accesibilidad: borde rosado en inputs, outline en botones
+       - :active   → Feedback visual al hacer clic (escala, sombra reducida)
+       - :first-child/:nth-child()  → Estilos alternos en tarjetas/items
+       - Transiciones suaves en todos los elementos interactivos
+
+
+    3. MEJORAS :
+       - Botones formulario: hover → color rosado + elevación
+       - Inputs: :focus → borde rosado con sombra suave
+       - Tarjetas servicios: :hover → elevación + zoom imagen
+       - Links: :hover → cambio color + escala
+    
+    4. CLASES BOOTSTRAP UTILIZADAS:
+       - .container       → centrar contenido max-width
+       - .row/.col-*      → diseño de dos columnas responsivo
+       - .form-control    → estilo input/select
+       - .btn/.btn-primary → botones con estilos Bootstrap
+    
+    
+    ====================================================================
+  -->
+  
+  
+
+  <!-- Botón de WhatsApp flotante -->
+  <!-- NO BORRAR: BOTÓN WHATSAPP - Requerido por el sitio. Mantener bajo ninguna circunstancia. -->
+  <a href="https://wa.me/+543516009938" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-button whatsapp-fixed">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+<header class="encabezado">
+  <h1 class="animate--fade-in">BARBERIA YAHVE</h1>
+  <h3 class="animate--fade-in animate--fast">TU ESTILO , TU FLOW</h3>
+  <a href="index.html" class="logo-link">
+    <img src="../assets/logo.jpeg" alt="logo" class="img-logo animate--slide-up">
+  </a>
+</header>
+
+<!-- menu principal: Bootstrap navbar colapsable -->
+<nav class="sticky navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">YAHVE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<main class="container">
+  <section class="grid grid--center">
+    <div class="animate--fade-in">
+      <h3>Bienvenido a Barbershop YAHVE</h3>
+      <p>
+        En Barbershop YAHVE creemos que un buen corte va mucho más allá de lo estético: es actitud, presencia y confianza. Creamos un espacio donde cada detalle está pensado para que vivas una experiencia única, cómoda y auténtica, desde el momento en que entrás hasta que te mirás al espejo y sonreís. Acá no se trata solo de tijeras y máquinas, se trata de entender tu estilo, tu personalidad y tu flow.
+      </p>
+      <p>
+        Nuestro equipo combina técnica, pasión y visión moderna para ofrecerte servicios personalizados, cuidando cada terminación y respetando lo que te representa. Trabajamos con dedicación, profesionalismo y una energía positiva que se siente en el ambiente, porque sabemos que tu imagen habla de vos incluso antes de decir una palabra. En YAHVE no seguimos tendencias, las adaptamos a vos.
+      </p>
+      <p>
+        Este es tu lugar para desconectar, renovarte y salir con seguridad. Tu estilo es único, tu flow también, y nosotros estamos acá para potenciarlo. Bienvenido a tu barbería, bienvenido a Barbershop YAHVE
+      </p>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <img src="../assets/img-home.png" alt="imagen principal" class="imagen-inicial animate--slide-up">
+
+
+<footer>
+  <div class="container">
+    <h6 class="animate--zoom-in">
+      🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
+    </h6>
+    <div class="content-box animate--fade-in animate--slow">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.352619397365!2d-64.16277619498479!3d-31.412107996210743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3539fa2aa31%3A0xf503e4ad7e79d57a!2sAv.%2024%20de%20Septiembre%201814%2C%20X5004FTX%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1768302180617!5m2!1sen!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p>Seguinos en nuestras redes sociales</p>
+    <hr>
+    <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+  </div>
+</footer>
+
+ 
+
+
+
+
+
+
+
+
+<script src="assets/js/anim.js"></script>
+../
+</body>
+</html>

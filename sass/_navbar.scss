@@ -1,0 +1,33 @@
+@use "variables" as vars;
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #0e0d0d;
+  z-index: vars.$z-navbar;
+}
+
+.navbar {
+  .nav-link {
+    color: vars.$text-light !important;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: vars.$secondary !important;
+      transform: none;
+    }
+
+    &.active {
+      color: vars.$secondary !important;
+      font-weight: 600;
+    }
+  }
+
+  .navbar-brand {
+    color: vars.$text-light !important;
+
+    &:hover {
+      color: vars.$secondary !important;
+    }
+  }
+}

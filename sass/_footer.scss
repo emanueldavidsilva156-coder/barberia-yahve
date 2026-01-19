@@ -1,0 +1,24 @@
+@use "variables" as vars;
+
+footer {
+  text-align: center;
+  padding: 20px;
+
+  .link-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: vars.$secondary;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: vars.$radius-md;
+    transition: all vars.$transition-base;
+
+    &:hover {
+      background-color: vars.$secondary-strong;
+      color: vars.$text-light;
+      transform: translateY(-2px);
+    }
+  }
+}

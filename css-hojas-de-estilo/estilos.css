@@ -1,573 +1,390 @@
-/* ===================================================================
-   BARBERIA YAHVE - ESTILOS RESPONSIVE + BOOTSTRAP
-   ===================================================================
-   Archivos CSS incluidos:
-   - Este archivo (estilos.css): estilos personalizados
-   - Bootstrap 5: agregado mediante CDN en todos los HTML
-   
-   Pseudoclases utilizadas (mejorar interactividad):
-   - :hover    → efectos al pasar el mouse sobre enlaces, botones, tarjetas
-   - :focus    → estado cuando elemento recibe foco (navegación por teclado)
-   - :active   → estado mientras se hace clic/presiona
-   - :first-child, :last-child  → selectores para primer/último elemento
-   - :nth-child(n)  → selectores específicos (ej: cada 2do elemento)
-   - ::before, ::after  → pseudo-elementos para decoración/iconos
-   ===================================================================
-*/
-
-/* tipo de fuete extraido desde google font*/
-@import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
-
-/* Variables de color globales */
-:root {
-    --accent: #0d6efd; /* azul (Bootstrap primary) — reemplaza rosas */
-    --accent-strong: #0b5ed7;
-    --focus-ring: rgba(13,110,253,0.12);
-}
-
-/* Reset básico y box-sizing */
-
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Tipografía base */
 body {
-    font-family: 'Vend Sans', sans-serif;
+  font-family: "Vend Sans", sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 100;
+  color: rgb(160, 152, 152);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 50px;
+  color: rgb(72, 132, 156);
+  font-weight: 100;
+}
+
+h6 {
+  font-size: 30px;
+  color: rgb(24, 45, 54);
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #0d6efd;
+  transform: scale(1.05);
+}
+a:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+a:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate--fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+.animate--slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-name: slideUp;
+  animation-duration: 4s;
+  animation-delay: 0ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+.animate--zoom-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-name: "zoomIn";
+  animation-duration: 3s;
+  animation-delay: 0ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+.animate--fast {
+  animation-duration: 3s !important;
+}
+
+.animate--slow {
+  animation-duration: 3s !important;
+}
+
+@keyframes bounceInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__animated {
+  animation-fill-mode: both;
+}
+
+.animate__bounceInDown {
+  animation-name: bounceInDown;
+  animation-duration: 5ms;
 }
 
 .encabezado {
-    background-color: #1b1b1b;
-    color: rgb(214, 114, 114);
-    text-align: center;
-    padding: 40px 0;
+  background-color: #1b1b1b;
+  color: rgb(214, 114, 114);
+  text-align: center;
+  padding: 40px 0;
+}
+.encabezado .img-logo {
+  width: 50vh;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
-/* Tamaño del logo */
-.img-logo {
-    width: 50vh;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #0e0d0d;
+  z-index: 1000;
 }
 
-/* caracteristicas sobre todos los tintulos*/
-h1 {
-    font-size: 100px;
-    color: rgb(160, 152, 152);
-    font-weight: 100;
-    text-transform: uppercase;
-
-
-}
-
-/* caracteristicas sobre las imagenes */
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px;
-    padding: 10px;
-}
-
-/* caracteristicas sobre la imagen del blog */
-.img-blog {
-    /* Imagen del blog: tamaño más grande y escalable */
-    width: 280px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-    border-radius: 12px;
-}
-
-/* toda la informacion cargada bajo el h3*/
-h3 {
-    font-size: 50px;
-    color: rgb(72, 132, 156);
-    font-weight: 100;
-    margin-top: 10px;
-    padding: 10px;
-    margin: 10px;
-}
-/* toda la informacion cargada bajo el h6*/
-h6 {
-    font-size: 30px;
-    color: rgb(23, 44, 53);
-    font-weight: 100;
-    margin-top: 10px;
-    padding: 20px;
-    margin: 10px;
-}
-/* caracteristicas de las listas no ordenadas - menu */
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 5px;
-    text-transform: uppercase;
-    margin: 5px; 
-}
-
-/* caracteristicas del menu*/
-a {
-    text-decoration: none;
-    font-size: 50px;
-    color: rgb(247, 247, 242);
-    font-weight: 600;
-    margin: 5px;
-    padding: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Pseudoclase :hover - Efecto visual al pasar el mouse */
-a:hover {
-    color: var(--accent);
-    transform: scale(1.05);
-}
-
-/* Pseudoclase :focus - Para navegación por teclado (accesibilidad) */
-a:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-/* Pseudoclase :active - Mientras se presiona el enlace */
-a:active {
-    transform: scale(0.98);
-}
-
-/* Navbar-specific controls: aumentar especificidad frente a Bootstrap
-   para que las pseudoclases se apliquen a los enlaces del menú */
 .navbar .nav-link {
-    color: #ffffff !important; /* forzar letras blancas en navbar */
-    transition: color 0.18s ease, transform 0.12s ease;
+  color: #ffffff !important;
+  transition: color 0.2s ease;
 }
 .navbar .nav-link:hover {
-    color: var(--accent) !important; /* azul/celeste al hover */
-    transform: none; /* evitar escalado en el menú */
+  color: #0d6efd !important;
+  transform: none;
 }
-.navbar .nav-link:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-.navbar .nav-link:active {
-    color: var(--accent-strong) !important;
-}
-
-/* Marca del navbar */
-.navbar .navbar-brand {
-    color: #ffffff !important;
-}
-.navbar .navbar-brand:hover,
-.navbar .navbar-brand:focus {
-    color: var(--accent) !important;
-    text-decoration: none;
-}
-
-/* Enlace activo */
 .navbar .nav-link.active {
-    color: var(--accent) !important;
-    font-weight: 600;
+  color: #0d6efd !important;
+  font-weight: 600;
+}
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar .navbar-brand:hover {
+  color: #0d6efd !important;
 }
 
-/* Imagen principal: ocupar todo el ancho del contenedor*/
-.imagen-inicial {
-    width: 100%;
-    height: auto;
-    display: block;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Estilos para el enlace de Instagram */
-.link-instagram {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    color: var(--accent);
-    /* Color alternativo (no rosa) */
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid--responsive {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.grid--center {
+  place-items: center;
 }
 
-/* Efecto hover para el enlace de Instagram */
-
-.link-instagram:hover {
-    background-color: var(--accent-strong);
-    color: #ffffff;
-    transform: translateY(-2px);
+footer {
+  text-align: center;
+  padding: 20px;
+}
+footer .link-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: #0d6efd;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+footer .link-instagram:hover {
+  background-color: #0b5ed7;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* Estilos para el icono de Instagram dentro del enlace */
-
-.link-instagram i {
-    font-size: 1.2em;
+.services {
+  display: grid;
+  gap: 1rem;
+}
+.services .service-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.services .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.services .service-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.services .service-card:hover img {
+  transform: scale(1.05);
 }
 
-.content-box {
-    width: auto;
-    margin: 20px;
-    ;
-    padding: 10vw;
-    border: 2vw solid #9b9090;
-    background-color: rgb(89, 94, 92);
-    text-decoration: azure;
-    font-size: 2vw;
-    font-family: Arial, Helvetica, sans-serif;
+button {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 /* Botón de WhatsApp */
 .whatsapp-button {
-    background-color: #25D366;
-    color: white;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    z-index: 9999;
+  background-color: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  z-index: 9999;
 }
-
 .whatsapp-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
-
-/* Pseudoclase :focus para botón WhatsApp - Accesibilidad */
 .whatsapp-button:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    box-shadow: 0 0 0 6px var(--focus-ring);
+  outline: 2px solid #0d6efd;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(13, 110, 253, 0.25);
 }
-
-/* Botón fijo en la esquina inferior derecha  */
-.whatsapp-fixed {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-}
-
-
-
 .whatsapp-button i {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-
-.sticky {
-    position: sticky;
-    top: 0px;
-    background-color: #0e0d0d;
-    padding: 5px;
-    z-index: 1000;
-    width: 100%;
-    left: 0;
+/* Botón fijo en la esquina inferior derecha */
+.whatsapp-fixed {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
-/* ==================================================
-   Grid utilities + Responsive helpers
-   - Añadí utilidades para usar CSS Grid en todo el proyecto
- 
-   ================================================== */
-
-/* Contenedor central estándar */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.imagen-inicial {
+  width: 90%;
+  display: block;
+  height: auto;
+  margin: 40px auto;
+  border-radius: 12px;
+  will-change: transform, opacity;
 }
 
-/* Grid utilities */
-.grid { display: grid; gap: 1rem; }
-.grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
-.grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
-.grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
-.grid--responsive { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.grid--center { place-items: center; }
-.grid-item { 
-    padding: 0.5rem;
-    transition: transform 0.3s ease;
+.img-blog {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 12px auto;
+  border-radius: 12px;
 }
 
-/* Pseudoclase :hover en items del grid - Efecto lift suave */
-.grid-item:hover {
-    transform: translateY(-2px);
+form {
+  max-width: 720px;
+  margin: 0 auto;
 }
-
-/* Pseudoclase :nth-child para alternar colores o estilos */
-.grid-item:nth-child(odd) {
-    background: rgba(50, 149, 206, 0.05);
-    border-radius: 8px;
+form label {
+  font-weight: 600;
 }
-
-.grid-item--span-2 { grid-column: span 2; }
-.grid-item--span-3 { grid-column: span 3; }
-
-/* Fallback simple para navegadores antiguos */
-.grid--fallback { display: block; }
-.grid--fallback > * { margin-bottom: 1rem; }
-
-/* Ajustes visuales para enlaces y botones en responsive */
-.link-instagram { transition: background-color 0.2s ease, color 0.2s ease; }
-
-/* ======================================
-   Media queries: Tablet (<= 1024px) y Mobile (<= 480px)
-   Ajustan tipografías, tamaños de logo, nav y grid
-   ====================================== */
-
-@media (max-width: 1024px) {
-    h1 { font-size: 48px; }
-    h3 { font-size: 28px; }
-    a { font-size: 20px; }
-    nav ul { gap: 20px; }
-    .img-logo { width: 110px; }
-    .img-blog { width: 180px; }
-    .content-box { padding: 6vw; font-size: 3.5vw; }
-    .whatsapp-button { width: 48px; height: 48px; }
-    /* Ajustes para la tabla de 'Decoloración global' en tablet/desktop intermedio */
-    .service-table__img img { width: 180px; }
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
-
-@media (max-width: 480px) {
-    /* Mobile: columnas responsivas, textos más pequeños */
-    h1 { font-size: 32px; }
-    h3 { font-size: 20px; }
-    a { font-size: 16px; }
-    /* Centrar el menú en móvil y mantener los enlaces inline cuando quepan */
-    nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0 auto;
-        list-style: none;
-        width: 100%;
-    }
-    nav ul li {
-        width: auto;
-        text-align: center;
-        display: inline-flex;
-        justify-content: center;
-    }
-    nav ul li a { display: inline-block; padding: 6px 8px; }
-    .img-logo { width: 90px; }
-    .img-blog { width: 120px; }
-    .content-box { padding: 4vw; font-size: 4vw; }
-    .whatsapp-button { width: 44px; height: 44px; }
-    /* Grid responsive automático usa minmax más pequeño en móvil */
-    .grid--responsive { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
-}
-
-/* Comentario: fin de utilidades Grid y responsive */
-
-/* parrafo del blog  */
-.parrafo-blog {
-    font-size: 24px;
-    color: #161515;
-    line-height: 1.6;
-    margin: 20px 0;
-    padding: 10px;
-    position: center;
-}
-
-/* Formularios: estilo base y responsive */
-form { max-width: 720px; margin: 0 auto; }
-form label { display: block; margin-bottom: 6px; font-weight: 600; }
-form select, form input[type="tel"], form input, form textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Pseudoclase :focus en inputs - Mejora de accesibilidad y UX */
-form select:focus, 
-form input[type="tel"]:focus, 
-form input:focus, 
+form input:focus,
+form select:focus,
 form textarea:focus {
-    border-color: #3cd8ec;
-    box-shadow: 0 0 0 3px rgba(124, 156, 243, 0.1);
-    outline: none;
+  border-color: #0d6efd;
+  outline: none;
 }
-
-form button { 
-    background: #1b1b1b; 
-    color: white; 
-    padding: 10px 16px; 
-    border: none; 
-    border-radius: 6px; 
-    cursor: pointer;
-    transition: all 0.3s ease;
+form button {
+  background-color: #1b1b1b;
+  color: #ffffff;
 }
-
-/* Pseudoclase :hover en botones - Feedback visual */
 form button:hover {
-    background: #4d7af5;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0d6efd;
 }
 
-/* Pseudoclase :active en botones - Feedback mientras se presiona */
-form button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+.services {
+  display: grid;
+  gap: 1rem;
 }
-
-/* Servicios: tarjetas responsivas para reemplazar tablas */
-.services { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-.service-card { 
-    display: grid; 
-    grid-template-columns: 180px 1fr; 
-    gap: 1rem; 
-    align-items: center; 
-    padding: 1rem; 
-    background: #f7f7f7; 
-    border-radius: 8px;
-    transition: all 0.3s ease;
+.services .service-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-
-/* Pseudoclase :hover para tarjetas de servicios - Efecto lift/shadow */
-.service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background: #f0f0f0;
+.services .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-/* Pseudoclase :first-child para primera tarjeta */
-.service-card:first-child {
-    background: linear-gradient(135deg, #f7f7f7, #e8e8e8);
+.services .service-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
-
-/* Pseudoclase :nth-child para estilos alternos */
-.service-card:nth-child(2),
-.service-card:nth-child(4) {
-    background: #fafafa;
-}
-
-.service-card img { 
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-/* Pseudoclase :hover en imágenes - Zoom suave */
-.service-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Estilos para tabla de servicio (versión tipo tabla: "Decoloración global") */
-.service-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0;
-}
-
-.service-table__img, .service-table__content {
-    vertical-align: middle;
-    padding: 0.5rem;
-}
-
-.service-table__img {
-    overflow: hidden;
-    width: 180px; /* fija el ancho de la celda en escritorio para que la imagen iguale a .service-card */
-}
-.service-table__img img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    will-change: transform;
-}
-
-/* Zoom suave al pasar sobre la tabla o sobre la propia imagen */
-.service-table:hover,
-.service-table:focus-within {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background: #f0f0f0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.service-table:hover .service-table__img img,
-.service-table__img img:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Móvil: convertir la tabla en bloques apilados para mantener responsividad */
-@media (max-width: 699px) {
-    /* En móvil la tabla se apila: imagen arriba y contenido debajo.
-       La imagen ocupa el 100% del ancho del contenedor, manteniendo proporciones. */
-    .service-table, .service-table tr, .service-table td {
-        display: block;
-        width: 100%;
-    }
-    .service-table__img {
-        width: 100%;
-        margin: 0 0 0.5rem 0;
-        text-align: left;
-    }
-    .service-table__img img {
-        width: 100%;
-        margin-bottom: 0.5rem;
-        height: auto;
-    }
-    .service-table__content { text-align: left; }
+.services .service-card:hover img {
+  transform: scale(1.05);
 }
 
 @media (min-width: 700px) {
-    .services { grid-template-columns: 1fr 1fr; }
-
-    /* Mantener comportamiento especial solo si NO es la tarjeta .decoloracion
-       (si el 3er elemento es la tarjeta decoloracion, no la haremos span) */
-    .services .service-card:nth-child(3):not(.decoloracion) {
-        grid-column: 1 / -1;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .services .service-card:nth-child(3):not(.decoloracion) img {
-        margin: 0 auto;
-        width: 220px; /* tamaño cómodo en desktop; respeta object-fit */
-    }
-
-    .services .service-card:nth-child(3):not(.decoloracion) div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Para pantallas >=700px, fijamos el ancho de la celda imagen para que quede a la izquierda */
-    .service-table__img { width: 180px; }
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .img-blog {
+    max-width: 360px;
+  }
+}
+@media (min-width: 992px) {
+  .img-blog {
+    max-width: 440px;
+  }
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .img-logo {
+    width: 90px;
+  }
 }
 
-@media (min-width: 1200px) {
-    /* En pantallas grandes, hacer las imágenes aún más prominentes */
-    .img-blog { width: 360px; }
-    .service-card { grid-template-columns: 220px 1fr; }
-    /* Imagen de la tabla en pantallas grandes */
-    .service-table__img { width: 220px; }
-}
+/*# sourceMappingURL=estilos.css.map */

@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
-     <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
     <!-- Bootstrap 5 CDN para componentes responsivos y utilidades -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados con pseudoclases y Grid utilities -->
-    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos.css">
+    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos-compiled.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 
@@ -19,10 +18,9 @@
   <!--
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    - Usa `.container` para centrar secciones.
-    - Usa `.grid grid--responsive` para listas/galerías.
-    - El nav usa `.sticky` para permanecer visible al hacer scroll.
+    
   -->
+  <!-- NO BORRAR: BOTÓN WHATSAPP - Requerido por el sitio. Mantener bajo ninguna circunstancia. -->
   <!-- Botón de WhatsApp flotante -->
   <a href="https://wa.me/+543516009938" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-button whatsapp-fixed">
     <i class="fa-brands fa-whatsapp"></i>
@@ -32,8 +30,10 @@
   <header class="encabezado">
    <!-- menu principal-->
   <h1>BARBERIA YAHVE</h1>
-  <h3>tu estilo , tu flow</h3>
-<img src="../assets/logo.jpeg" alt="logo" class="img-logo">
+  <h3 class="animate--fade-in">TU ESTILO , TU FLOW</h3>
+  <a href="../secciones-de-la-pagina/index.html" class="logo-link">
+    <img src="../assets/logo.jpeg" alt="logo" class="img-logo animate--slide-up">
+  </a>
 
   <nav class="sticky navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container-fluid">
@@ -62,7 +62,7 @@
     <div class="container">
       <section class="services">
         <article class="service-card">
-          <img src="../assets/servicios corte.jpeg" alt="corte de cabello">
+          <img src="../assets/servicios-corte.jpeg" alt="corte de cabello">
           <div>
             <h5>Corte de cabello</h5>
             <p>Un barbero profesional domina técnicas para resaltar rasgos, ofreciendo una experiencia de relajación y renovación. Un buen corte refleja atención al detalle y eleva la autoestima.</p>
@@ -70,7 +70,7 @@
         </article>
 
         <article class="service-card">
-          <img src="../assets/servicio teñido de barba.jpeg" alt="teñido de barba">
+          <img src="../assets/servicio-tenido-barba.jpeg" alt="teñido de barba">
           <div>
             <h5>Perfilado y teñido de barba</h5>
             <p>Perfilar y teñir la barba ayuda a mantener una apariencia cuidada y rejuvenecida. Ideal para un look limpio y con estilo.</p>
@@ -78,7 +78,7 @@
         </article>
 
         <article class="service-card decoloracion">
-          <img src="../assets/servicios decoloracion global.jpeg" alt="decoloracion global">
+          <img src="../assets/servicios-decoloracion-global.jpeg" alt="decoloracion global">
           <div>
             <h5>Decoloración global</h5>
             <p>Aclarado y coloración para un cambio total de look, realizado con productos que cuidan la salud del cabello.</p>
@@ -86,7 +86,7 @@
         </article>
 
         <article class="service-card">
-          <img src="../assets/servicios perfilado de barba.jpeg" alt="perfilado de barba">
+          <img src="../assets/servicios-perfilado-barba.jpeg" alt="perfilado de barba">
           <div>
             <h5>Perfilado de barba y cejas</h5>
             <p>Definición de contornos y limpieza para un aspecto pulcro y equilibrado.</p>
@@ -95,33 +95,19 @@
       </section>
     </div>
     <footer>
-  <center>
-    <br>
-    <h6>
-      🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
-    </h6>
-    <p>
-      <center>
-        <br>seguinos en nuestras redes sociales
+      <div class="container">
+        <h6 class="animate--zoom-in">
+          🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
+        </h6>
+        <p>Seguinos en nuestras redes sociales</p>
         <hr>
-        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a>
-        
-      </center>
-    </p>
-  </center>
+        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
     </footer>
 
-
-
-
-   
-  </header>
-  
-
-
-    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/anim.js"></script>
+  </body>
 </html>

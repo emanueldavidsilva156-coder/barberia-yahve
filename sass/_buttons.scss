@@ -1,0 +1,45 @@
+@use "variables" as vars;
+
+button {
+  border-radius: vars.$radius-sm;
+  transition: all vars.$transition-base;
+  cursor: pointer;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform vars.$transition-fast, box-shadow vars.$transition-fast;
+  z-index: vars.$z-whatsapp;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus {
+    outline: 2px solid vars.$secondary;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(13, 110, 253, 0.25);
+  }
+
+  i {
+    font-size: 3rem;
+  }
+}
+
+/* Botón fijo en la esquina inferior derecha */
+.whatsapp-fixed {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}

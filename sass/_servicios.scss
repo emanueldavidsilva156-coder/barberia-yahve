@@ -1,0 +1,37 @@
+@use "variables" as vars;
+
+.services {
+  display: grid;
+  gap: 1rem;
+
+  .service-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background: vars.$bg-light;
+    border-radius: vars.$radius-md;
+    transition: all vars.$transition-base;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      border-radius: vars.$radius-md;
+      transition: transform vars.$transition-base;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+}

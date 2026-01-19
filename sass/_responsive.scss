@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+  .img-blog {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-blog {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 { font-size: 48px; }
+  h3 { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 32px; }
+  h3 { font-size: 20px; }
+
+  .img-logo {
+    width: 90px;
+  }
+}

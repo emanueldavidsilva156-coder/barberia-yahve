@@ -8,7 +8,7 @@
     <!-- Bootstrap 5 CDN: proporciona componentes y utilidades responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados: Grid utilities + Pseudoclases (:hover, :focus, :active) -->
-    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos.css">
+    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos-compiled.css">
     <!-- Font Awesome icons para redes sociales e iconografía -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -18,10 +18,8 @@
 <body>
   <!--
     Nota: Se aplicaron utilidades Grid y reglas responsive desde `../css-hojas-de-estilo/estilos.css`.
-    - Usa `.container` para centrar secciones.
-    - Usa `.grid grid--responsive` para listas/galerías.
-    - El nav usa `.sticky` para permanecer visible al hacer scroll.
-  -->
+   -->
+  <!-- NO BORRAR: BOTÓN WHATSAPP - Requerido por el sitio. Mantener bajo ninguna circunstancia. -->
   <!-- Botón de WhatsApp flotante -->
   <a href="https://wa.me/+543516009938" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-button whatsapp-fixed">
     <i class="fa-brands fa-whatsapp"></i>
@@ -31,8 +29,10 @@
 <header class="encabezado">
     <!-- menu principal-->
   <h1>BARBERIA YAHVE</h1>
-  <h3>tu estilo , tu flow</h3>
-<img src="../assets/logo.jpeg" alt="logo" class="img-logo">
+  <h3 class="animate--fade-in">TU ESTILO , TU FLOW</h3>
+  <a href="../secciones-de-la-pagina/index.html" class="logo-link">
+    <img src="../assets/logo.jpeg" alt="logo" class="img-logo animate--slide-up">
+  </a>
 
   <nav class="sticky navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container-fluid">
@@ -55,7 +55,7 @@
   <div class="container">
     <section class="services">
       <article class="service-card">
-        <img src="../assets/inicio de viaje.jpeg" alt="como comenzo todo">
+        <img src="../assets/inicio-de-viaje.jpeg" alt="como comenzo todo">
         <div>
           <h5>Donde comenzo todo</h5>
           <p>Todo comenzó en el año 2016 cuando Emanuel Silva se recibió de peluquero y barbero. Años de trabajo con distintos tipos de cabello nos permitieron construir una sólida experiencia en el rubro, aprendiendo a adaptar estilos y cuidados según cada persona.</p>
@@ -82,21 +82,17 @@
   </div>
 
     <footer>
-        <center>
-    <br>
-    <h6>
-    🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
-    </h6>
-    <p>
-      <center>
-        <br>seguinos en nuestras redes sociales
+      <div class="container">
+        <h6 class="animate--zoom-in">
+          🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
+        </h6>
+        <p>Seguinos en nuestras redes sociales</p>
         <hr>
-        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a> 
-        
-  
-  </footer>
+        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </footer>
   
     
 
@@ -105,5 +101,6 @@
 </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/anim.js"></script>
 </body>
 </html>

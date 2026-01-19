@@ -1,0 +1,14 @@
+@use "variables" as vars;
+
+.encabezado {
+  background-color: vars.$primary;
+  color: rgb(214, 114, 114);
+  text-align: center;
+  padding: 40px 0;
+
+  .img-logo {
+    width: 50vh;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+}

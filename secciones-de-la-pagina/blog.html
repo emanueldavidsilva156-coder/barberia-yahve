@@ -1,116 +1,87 @@
-<HTML:5>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- imagen y titulo de la pestaña-->
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
-     <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
-    <!-- Bootstrap 5 CDN -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog - Barbería YAHVE</title>
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos.css">
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css-hojas-de-estilo/estilos-compiled.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+  </head>
+  <body>
+    <!-- NO BORRAR: BOTÓN WHATSAPP - Requerido por el sitio. Mantener bajo ninguna circunstancia. -->
+    <a href="https://wa.me/+543516009938" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-button whatsapp-fixed">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-<!--
-    - Usa `.grid grid--responsive` para listas/galerías.
-    - El nav usa `.sticky` para permanecer visible al hacer scroll.
-  -->
-  <!-- Botón de WhatsApp flotante -->
-  <a href="https://wa.me/+543516009938" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-button whatsapp-fixed">
-    <i class="fa-brands fa-whatsapp"></i>
-
- 
-  </a>
-  
-<header class="encabezado">
-   <!-- encabezado-->
-  <h1>BARBERIA YAHVE</h1>
-  <h3>tu estilo , tu flow</h3>
-<img src="../assets/logo.jpeg" alt="logo" class="img-logo">
-
-  <nav class="sticky navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">YAHVE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavB" aria-controls="mainNavB" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavB">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-     <!-- subtitulo -->
-
-  <div class="container">
-    <header class="grid grid--responsive grid--center">
-      <div>
-        <h2>Bienvenidos a nuestro blog</h2>
-        <p>En este espacio explicamos detalles importantes al momento de ir a una barbería.</p>
-        <h3>Hablemos sobre las tijeras de un barbero</h3>
-      </div>
-      <div>
-        <img class="img-blog" src="../assets/diseño pagina ema.png" alt="las tijeras de un barbero">
-      </div>
+    <header class="encabezado">
+      <h1>BARBERIA YAHVE</h1>
+      <h3 class="animate--fade-in">TU ESTILO , TU FLOW</h3>
+      <a href="../secciones-de-la-pagina/index.html" class="logo-link">
+      <img src="../assets/logo.jpeg" alt="logo" class="img-logo animate--slide-up">
+      </a>
+      <nav class="sticky navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">YAHVE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavB" aria-controls="mainNavB" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavB">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a></li>
+              <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <article class="parrafo-blog">
-      <p>Las tijeras del barbero: pulir, microdentadas y filo navaja, herramientas esenciales en la barbería.</p>
+    <main class="container my-4">
+      <header class="grid grid--responsive grid--center mb-4">
+        <div>
+          <h2>Bienvenidos a nuestro blog</h2>
+          <p>En este espacio explicamos detalles importantes al momento de ir a una barbería.</p>
+          <h3>Hablemos sobre las tijeras de un barbero</h3>
+        </div>
+        <div>
+          <img class="img-blog" src="../assets/diseno-pagina-ema.png" alt="las tijeras de un barbero">
+        </div>
+      </header>
 
-      <p>En el mundo de la barbería profesional, las tijeras son mucho más que una herramienta: son una extensión de la mano del barbero y una parte fundamental para lograr cortes precisos, equilibrados y con estilo. Existen distintos tipos de tijeras, y conocer sus diferencias permite entender cómo cada una influye en el acabado final del corte. Hoy te contamos sobre tres de las más utilizadas: la tijera de pulir, la tijera microdentada y la tijera filo navaja.</p>
+      <article class="parrafo-blog">
+        <p>Las tijeras del barbero: pulir, microdentadas y filo navaja, herramientas esenciales en la barbería.</p>
 
-      <h4>✂️ Tijera de pulir: control y textura</h4>
-      <p>La tijera de pulir —también conocida como tijera de entresacar o de esculpir— se utiliza para reducir el volumen del cabello sin modificar la forma general del corte. Su hoja dentada permite eliminar una cantidad controlada de pelo en cada pasada, dejando un acabado más suave y natural. En barbería, se usa para dar movimiento y liviandad al cabello, ideal para quienes buscan un look más descontracturado pero con estilo. Es una herramienta clave para difuminar transiciones y lograr degradados perfectos.</p>
+        <p>En el mundo de la barbería profesional, las tijeras son mucho más que una herramienta: son una extensión de la mano del barbero y una parte fundamental para lograr cortes precisos, equilibrados y con estilo. Existen distintos tipos de tijeras, y conocer sus diferencias permite entender cómo cada una influye en el acabado final del corte. Hoy te contamos sobre tres de las más utilizadas: la tijera de pulir, la tijera microdentada y la tijera filo navaja.</p>
 
-      <h4>⚙️ Tijera microdentada: precisión en cada corte</h4>
-      <p>La tijera microdentada se caracteriza por tener pequeñas muescas o dientes en uno de sus filos, lo que evita que el cabello se deslice durante el corte. Esto permite una mayor precisión y control, especialmente útil al trabajar cabellos finos o resbaladizos. En la barbería, es ideal para cortes clásicos, líneas definidas y acabados donde la exactitud es fundamental. Además, es perfecta para barberos en formación, ya que reduce el riesgo de que el cabello se desplace y mejora la seguridad en el manejo.</p>
+        <h4>✂️ Tijera de pulir: control y textura</h4>
+        <p>La tijera de pulir —también conocida como tijera de entresacar o de esculpir— se utiliza para reducir el volumen del cabello sin modificar la forma general del corte. Su hoja dentada permite eliminar una cantidad controlada de pelo en cada pasada, dejando un acabado más suave y natural. En barbería, se usa para dar movimiento y liviandad al cabello, ideal para quienes buscan un look más descontracturado pero con estilo. Es una herramienta clave para difuminar transiciones y lograr degradados perfectos.</p>
 
-      <h4>🔪 Tijera filo navaja: suavidad y elegancia</h4>
-      <p>Por otro lado, la tijera filo navaja ofrece un corte extremadamente limpio y fluido, gracias a su filo liso y pulido. Se utiliza para técnicas avanzadas de corte en seco o en movimiento, aportando un acabado brillante y natural. Es la herramienta preferida por barberos experimentados que buscan un corte más artístico y con mayor libertad de expresión. Este tipo de tijera requiere una mano entrenada, ya que su filo es más delicado y preciso.</p>
+        <h4>⚙️ Tijera microdentada: precisión en cada corte</h4>
+        <p>La tijera microdentada se caracteriza por tener pequeñas muescas o dientes en uno de sus filos, lo que evita que el cabello se deslice durante el corte. Esto permite una mayor precisión y control, especialmente útil al trabajar cabellos finos o resbaladizos. En la barbería, es ideal para cortes clásicos, líneas definidas y acabados donde la exactitud es fundamental. Además, es perfecta para barberos en formación, ya que reduce el riesgo de que el cabello se desplace y mejora la seguridad en el manejo.</p>
 
-      <h4>💈 El arte detrás de las tijeras</h4>
-      <p>Cada tipo de tijera representa una forma de arte y técnica dentro de la barbería. Un buen barbero no solo sabe cortar, sino también elegir la herramienta correcta según el tipo de cabello, el estilo deseado y la personalidad del cliente. Entender cómo funcionan las tijeras de pulir, microdentadas y filo navaja es parte del profesionalismo que distingue a una barbería moderna y de calidad.</p>
+        <h4>🔪 Tijera filo navaja: suavidad y elegancia</h4>
+        <p>Por otro lado, la tijera filo navaja ofrece un corte extremadamente limpio y fluido, gracias a su filo liso y pulido. Se utiliza para técnicas avanzadas de corte en seco o en movimiento, aportando un acabado brillante y natural. Es la herramienta preferida por barberos experimentados que buscan un corte más artístico y con mayor libertad de expresión. Este tipo de tijera requiere una mano entrenada, ya que su filo es más delicado y preciso.</p>
 
-      <h4>🤝 Conclusión</h4>
-      <p>En definitiva, las tijeras son el alma del barbero. Detrás de cada corte perfecto hay conocimiento, práctica y pasión por el detalle. En nuestra barbería valoramos la técnica y el cuidado en cada servicio, utilizando herramientas profesionales para garantizar resultados únicos y personalizados.</p>
-    </article>
-  </div>
-    
+        <h4>💈 El arte detrás de las tijeras</h4>
+        <p>Cada tipo de tijera representa una forma de arte y técnica dentro de la barbería. Un buen barbero no solo sabe cortar, sino también elegir la herramienta correcta según el tipo de cabello, el estilo deseado y la personalidad del cliente. Entender cómo funcionan las tijeras de pulir, microdentadas y filo navaja es parte del profesionalismo que distingue a una barbería moderna y de calidad.</p>
 
-    <!-- pie de pagina  -->
-    <footer>
-  <center>
-    <br>
-    <h6>
-        🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad. Cada visita, cada mensaje y cada recomendación hacen que sigamos creciendo con más flow y pasión. 🙌💈 Gracias por elegirnos, por confiar en nuestras manos y por ser parte de esta familia que transforma el look en actitud. Esto recién empieza… ¡y vos sos parte de la historia! ✂️✨
-    <p>
-        
-    <!-- redes sociales  -->
-      <center>
-        <br>seguinos en nuestras redes sociales
-        <hr>
-        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a>
-        
-      </center>
-    </p>
-  </center>
+        <h4>🤝 Conclusión</h4>
+        <p>En definitiva, las tijeras son el alma del barbero. Detrás de cada corte perfecto hay conocimiento, práctica y pasión por el detalle. En nuestra barbería valoramos la técnica y el cuidado en cada servicio, utilizando herramientas profesionales para garantizar resultados únicos y personalizados.</p>
+      </article>
+    </main>
+
+    <footer class="bg-light py-4 animate--zoom-in">
+      <div class="container text-center">
+        <h6>🔥 Gracias por ser parte de esta revolución del estilo. En Barbershop YAHVE no solo cortamos cabello, creamos identidad.</h6>
+        <p>Seguinos en nuestras redes sociales:</p>
+        <a href="https://www.instagram.com/yahve.barberia" target="_blank" class="link-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/anim.js"></script>
   </body>
-
-
-
-</HTML:5>
+</html>
